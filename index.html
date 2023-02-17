@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam CBT</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="intro py-4 bg-white text-primary display-1 px-5">Welcome? Take your CBT Exam</div>
+    <div class="bg-success">
+        <h2 class="py-4 text-white">ON with the QuestionS...</h2>
+    <div id="cont" class="text-white container" ></div>
+    </div>
+    
+
+    <script>
+         let inp=document.getElementById('inp')
+        let form=document.querySelector('.form')
+      let index=1
+      let scores=0
+        let array=[
+            {
+                What:'Which of these is another word for Diacritical Tone?',
+
+                option:[
+                'Tone sign',
+                'Sound symbol',
+                'Yoruba tone',
+                'Tonal mark'
+                ],
+                correct:'Sound symbol' 
+            },
+
+            {
+                What:'How many Diacritical tones do we have in Yoruba Language?',
+
+                option:[
+                    'Five',
+                    'Two',
+                    'Three',
+                    'one'
+                ], 
+                correct:'five'
+            },
+          
+            {
+                What:'What is “Afternoon” in Yoruba?',
+
+                option:[
+                    'Àárọ̀',
+                    'Ìrọ̀lẹ́',
+                    'Alẹ́',
+                    'Ọ̀sán'
+                ],
+                correct:'Alẹ́' 
+            },
+
+            {
+                What:'What are Diacritical Tones? ',
+
+                option:[
+                    'They are symbolic tones used in reading, writing and speaking Yoruba.',
+                    'They are symbolic tones used in reading, writing and speaking Yoruba.',
+                    'They are symbols written above or below Letters to specify their articulation.',
+                    'All of the above'
+                ],
+                correct:'They are symbols written above or below Letters to specify their articulation.'
+            },
+          
+            
+        ]
+//let{frult,nam,hobies}=Goeries
+
+// array.forEach((element,i) => {
+    let [{What,option,correct}]=array
+   
+// });
+
+
+let i = 0
+//let correctAnswers=[A,A,A,A]
+let submit=document.querySelector('#subm')
+
+
+cont=document.getElementById('cont')
+        function display(){
+
+                array.forEach((elem, i) => {
+                cont.innerHTML+=`<div id='form' class='my-4'><h6 class='display-6'>(${index++}) ${elem.What}</h6>
+                </div> `
+
+                array[i].option.forEach(max =>{
+                cont.innerHTML+=` <form class='option form-check my-3'><input name='size${index}' type="radio" id='inp' value="${max}">
+                <span id='inp'>${max}</span></form>
+                `
+           });
+                });
+                        
+               
+                
+                cont.innerHTML+=`<form class='form text-center'>
+                 <button id='subm' class='btn btn-light px-5 my-5'>Submit</button>
+                     </form>`
+                  
+        }
+       
+        display()
+       
+        
+       
+           //console.log(document.querySelectorAll('max'))
+
+
+         
+        //    form.addEventListener('submit', e =>{
+        //     e.preventDefault();
+
+        // //    if(inp.value === correct[sel]){
+        // //         console.log('nice')
+        // //     }
+        // //     else{
+        // //         console.log('toor')
+        // //     }
+
+        //        });
+        //        display()
+     
+       
+      
+      
+      
+
+    
+        
+    </script>
+</body>
+</html>
